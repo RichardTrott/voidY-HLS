@@ -2,7 +2,7 @@
 [![Build](https://github.com/RichardTrott/voidY-HLS/actions/workflows/node.js.yml/badge.svg)](https://github.com/RichardTrott/voidY-HLS/actions/workflows/node.js.yml)
 # VoidY 
 
-Cheesy hack project demonstrating descent camera overlay/HUD design and process. Very WIP.
+Hacky project demonstrating descent camera overlay/HUD design and process. Very WIP.
 
 Live demo at [Netlify](https://awesome-euler-a694af.netlify.app/)
 
