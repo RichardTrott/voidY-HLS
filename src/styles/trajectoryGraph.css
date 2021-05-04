@@ -1,0 +1,40 @@
+.trajectory_graph {
+    width: 33vw;
+    height: 33vh;
+    padding: 1rem;
+}
+
+.trajectory_graph svg {
+    height: 100%;
+    width: 100%;
+}
+
+.planned_alt {
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-dasharray: 2 3;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.planned_vel {
+    stroke: rgba(155, 155, 255, 0.5);
+    stroke-dasharray: 2 3;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.actual_alt {
+    stroke: var(--primary-color);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.actual_vel {
+    stroke: var(--secondary-color);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    fill: none;
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+.hls_mock {
+  --border-color: rgba(255, 255, 255, 0.2);
+  --green-hue: 136;
+  --green-sat: 100%;
+  --green-lightness: 50%;
+  --blue-hue: 203;
+  --blue-sat: 100%;
+  --blue-lightness: 50%;
+  --primary-color: hsl(var(--blue-hue) var(--blue-sat) var(--blue-lightness));
+  --secondary-color: hsl(var(--green-hue) var(--green-sat) var(--green-lightness));
+
+  background: #000;
+  color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.hls_mock,
+.mock_descent_camera_view,
+.descent_overlay,
+.html_overlay
+ {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ident {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.8;
+  font-weight: 200;
+  text-align: right;
+  position: fixed;
+  bottom: 0.8rem;
+  right: 0.8rem;
+}
+

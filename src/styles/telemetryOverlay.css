@@ -1,0 +1,58 @@
+.telemetry_overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.top_row,
+.center_row,
+.bottom_row
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.center_row {
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+}
+
+.bottom_row {
+  justify-content: center;
+}
+
+.telemetry_overlay article {
+    position: relative;
+    background-image: radial-gradient(
+        ellipse at bottom, 
+        hsla(var(--blue-hue), 100%, 50%, 0.1), 
+        hsla(var(--blue-hue), 100%, 50%, 0.0)
+    );
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+        to top,
+        hsla(var(--blue-hue), 100%, 50%, 0.4), 
+        hsla(var(--blue-hue), 100%, 50%, 0.2)
+    );
+    box-shadow: 0 0px 30px hsla(var(--blue-hue), 100%, 20%, 0.1);
+;
+}
+
+.section_label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  opacity: 0.8;
+  font-size: 0.7rem;
+}

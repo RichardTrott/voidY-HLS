@@ -1,14 +1,27 @@
 {
-  "name": "moonshot-troika",
+  "name": "voidy-hls",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "d3-scale": "^3.3.0",
+    "d3-shape": "^2.1.0",
+    "mobx": "^6.3.0",
+    "mobx-react": "^7.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "three": "^0.128.0",
+    "troika": "^1.0.0",
+    "troika-3d": "^0.41.0",
+    "troika-3d-text": "^0.41.1",
+    "troika-3d-ui": "^0.41.1",
+    "troika-core": "^0.41.0",
+    "troika-flex-layout": "^0.41.1",
+    "troika-three-text": "^0.41.1",
+    "use-resize-observer": "^7.0.0",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
