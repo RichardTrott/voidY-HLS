@@ -10,6 +10,7 @@
   --blue-lightness: 50%;
   --primary-color: hsl(var(--blue-hue) var(--blue-sat) var(--blue-lightness));
   --secondary-color: hsl(var(--green-hue) var(--green-sat) var(--green-lightness));
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   background: #000;
   color: #fff;

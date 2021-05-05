@@ -1,9 +1,6 @@
 
 /* Tally grouping with common heading */
 .tally_group {
-  /* width: 25vw; */
-  /* border: solid var(--border-color); */
-  /* border-width: 0 1px; */
   display: flex;
   flex-direction: column;
   margin: 0 2rem;

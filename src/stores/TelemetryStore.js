@@ -7,6 +7,12 @@ import { makeObservable, observable, action } from 'mobx'
 const deviate = (prevDelta, nextPlanned) => (Math.random() * (prevDelta - nextPlanned) + nextPlanned)
 const last = arr => arr[arr.length - 1]
 
+/**
+ * System/UI modes.
+ * Modes may only advance.
+ * 
+ * TODO add mode-transition constraint conditions and possible automatic aborts.
+ */
 export const MODES = {
     ORBIT: {
         id: 10,
@@ -78,8 +84,19 @@ class Telemetry {
 
             this.plan[minutes - i] = {
                 t: new Date(this.endTime - (i * milliseconds)),
+
+                // Descent
                 altitude: _alt, // meters
-                velocity: Math.max(_vel, 0) // m/s
+                velocity: Math.max(_vel, 0), // m/s
+
+                // Propulsion
+                throttle_r1: 0,
+                throttle_r2: 0,
+                throttle_r3: 0,
+                throttle_rvac1: 0,
+                throttle_rvac2: 0,
+                throttle_rvac3: 0,
+                throttle_terminal: 0,
             }
         }
     }
@@ -94,11 +111,17 @@ class Telemetry {
         const t = this.totalTime - this.remainingTime
         const planned = this.plan[t]
         const prevActual = last(this.actual)
+        const variableKeys = Object.keys(planned)
 
         this.actual.push({
             ...planned,
+            
+            // Descent
             altitude: prevActual ? deviate(prevActual.altitude, planned.altitude) : planned.altitude, // meters
-            velocity: prevActual ? deviate(prevActual.velocity, planned.velocity) : planned.velocity
+            velocity: prevActual ? deviate(prevActual.velocity, planned.velocity) : planned.velocity,
+
+            // Propulsion
+            // Orbit
         })
 
 

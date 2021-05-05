@@ -4,17 +4,28 @@ import { HtmlTally } from './HtmlTally'
 import { StarshipOrtho } from '../starship/StarshipOrtho'
 import { TrajectoryGraph } from './TrajectoryGraph'
 import { ModeSwitch } from './ModeSwitch'
+import { ReactComponent as UpperBgRear} from '../../assets/svg/hud_panel_bgs_upper_bg_rear.svg'
+import { ReactComponent as UpperBgFront} from '../../assets/svg/hud_panel_bgs_upper_bg_front.svg'
+import { ReactComponent as LowerBgRear} from '../../assets/svg/hud_panel_bgs_lower_bg_rear.svg'
+import { ReactComponent as LowerBgFront} from '../../assets/svg/hud_panel_bgs_lower_bg_front.svg'
 import '../../styles/telemetryOverlay.css'
 
 export const HtmlTelemetryOverlay = observer((props) => {
     return (
         <div className="telemetry_overlay">
+            <div className="telemetry_backgrounds">
+                <UpperBgRear className="panel_bg  upper_bg_rear" />
+                <UpperBgFront className="panel_bg upper_bg_front" />
+                <UpperBgFront className="panel_bg upper_bg_front upper_bg_front_modeswitch" />
+                <LowerBgRear className="panel_bg lower_bg_rear" />
+                <LowerBgFront className="panel_bg lower_bg_front" />
+            </div>
+            <ModeSwitch />
             <div className="top_row">
                 <div className="master_mode">
                     <div className="section_label">
                         <div className="label_name">Mission Mode</div>
                     </div>
-                    <ModeSwitch />
                 </div>
                 <div className="tally_group">
                     <div className="tally_group_heading">Orbit</div>
