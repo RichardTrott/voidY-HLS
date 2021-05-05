@@ -111,7 +111,7 @@ class Telemetry {
         const t = this.totalTime - this.remainingTime
         const planned = this.plan[t]
         const prevActual = last(this.actual)
-        const variableKeys = Object.keys(planned)
+        // const variableKeys = Object.keys(planned)
 
         this.actual.push({
             ...planned,
